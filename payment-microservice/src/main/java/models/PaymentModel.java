@@ -1,6 +1,7 @@
 package models;
 
 import lombok.*;
+import org.springframework.hateoas.RepresentationModel;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,7 +13,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class PaymentModel {
+public class PaymentModel extends RepresentationModel<RepresentationModel> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
